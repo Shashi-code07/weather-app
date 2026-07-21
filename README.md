@@ -7,7 +7,7 @@ A modern and responsive Weather App built using **HTML, CSS, and JavaScript** th
 
 ## 🌐 Live Demo
 
-🔗 https://your-live-demo-link
+🔗C:/Users/priya/Desktop/weather-app/index.html
 
 ---
 
