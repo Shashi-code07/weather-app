@@ -20,7 +20,6 @@ A modern and responsive Weather App built using **HTML, CSS, and JavaScript** th
 
 ![5-Day Forecast](screenshot2.png)
 
-![Dark Mode](screenshot3.png)
 ```
 
 ---
