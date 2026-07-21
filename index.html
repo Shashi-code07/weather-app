@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="weather-card">
+
+            <h1>Weather App</h1>
+
+            <!-- Search -->
+            <div class="search-box">
+
+                <input type="text" id="city" placeholder="Enter City Name">
+
+                <button id="searchBtn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+                <button id="locationBtn">
+                    <i class="fa-solid fa-location-crosshairs"></i>
+                </button>
+
+            </div>
+
+            <!-- Weather -->
+            <div class="weather-info">
+
+                <img id="weatherIcon" class="weather-icon" alt="Weather Icon">
+
+                <h2 id="temperature">25°C</h2>
+
+                <h3 id="cityName">New Delhi</h3>
+
+                <p id="weatherStatus">Clear Sky</p>
+
+                <!-- Main Details -->
+                <div class="details">
+
+                    <div class="detail-box">
+                        <i class="fa-solid fa-water"></i>
+                        <div>
+                            <span>Humidity</span>
+                            <h4 id="humidity">60%</h4>
+                        </div>
+                    </div>
+
+                    <div class="detail-box">
+                        <i class="fa-solid fa-wind"></i>
+                        <div>
+                            <span>Wind</span>
+                            <h4 id="wind">12 km/h</h4>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Extra Details -->
+                <div class="extra-details">
+
+                    <div class="extra-box">
+                        <span>🌡 Feels Like</span>
+                        <h4 id="feelsLike">--°C</h4>
+                    </div>
+
+                    <div class="extra-box">
+                        <span>👁 Visibility</span>
+                        <h4 id="visibility">-- km</h4>
+                    </div>
+
+                    <div class="extra-box">
+                        <span>🌅 Sunrise</span>
+                        <h4 id="sunrise">--</h4>
+                    </div>
+
+                    <div class="extra-box">
+                        <span>🌇 Sunset</span>
+                        <h4 id="sunset">--</h4>
+                    </div>
+
+                </div>
+
+                <!-- Forecast -->
+                <div class="forecast">
+
+                    <h2>5-Day Forecast</h2>
+
+                    <div id="forecastCards" class="forecast-cards"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
