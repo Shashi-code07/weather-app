@@ -17,12 +17,37 @@ const feelsLike = document.getElementById("feelsLike");
 const visibility = document.getElementById("visibility");
 const sunrise = document.getElementById("sunrise");
 const sunset = document.getElementById("sunset");
+const dateTime = document.getElementById("dateTime");
+const loader = document.getElementById("loader");
+const error = document.getElementById("error");
+function updateDateTime() {
+
+    const now = new Date();
+
+    dateTime.textContent =
+        now.toLocaleDateString("en-IN", {
+            weekday: "long",
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+        }) +
+        " | " +
+        now.toLocaleTimeString([], {
+            hour: "2-digit",
+            minute: "2-digit"
+        });
+
+}
+
+updateDateTime();
+setInterval(updateDateTime, 1000);
 
 // Weather Fetch
 async function checkWeather(city) {
 
     if (!city) return;
-
+    loader.style.display = "block";
+    error.textContent = "";
     try {
 
         const response = await fetch(
@@ -30,14 +55,15 @@ async function checkWeather(city) {
         );
 
         if (!response.ok) {
-            alert("City not found!");
+            error.textContent = "❌ City not found!";
             return;
         }
 
         const data = await response.json();
-
+        getForecast(data.coord.lat, data.coord.lon);
         // Main Details
         cityName.textContent = data.name;
+        localStorage.setItem("city", data.name);
         temperature.textContent = Math.round(data.main.temp) + "°C";
         humidity.textContent = data.main.humidity + "%";
         wind.textContent = data.wind.speed + " km/h";
@@ -72,8 +98,11 @@ async function checkWeather(city) {
 
     } catch (error) {
         console.log(error);
-        alert("Something went wrong!");
+        error.textContent = "⚠ Something went wrong!";
     }
+    finally {
+    loader.style.display = "none";
+}
 }
 
 // Background Change
@@ -111,6 +140,7 @@ function changeBackground(weather) {
 searchBtn.addEventListener("click", () => {
 
     checkWeather(cityInput.value.trim());
+    cityInput.value = "";
 
 });
 
@@ -152,10 +182,10 @@ locationBtn.addEventListener("click", () => {
                     data.main.humidity + "%";
 
                 wind.textContent =
-                    data.wind.speed + " km/h";
+                        (data.wind.speed * 3.6).toFixed(1) + " km/h";
 
                 weatherStatus.textContent =
-                    data.weather[0].description;
+                        data.weather[0].description.replace(/\b\w/g, c => c.toUpperCase());
 
                 feelsLike.textContent =
                     Math.round(data.main.feels_like) + "°C";
@@ -200,7 +230,9 @@ locationBtn.addEventListener("click", () => {
 
 
 // Default City
-checkWeather("Kanpur");
+const lastCity = localStorage.getItem("city") || "Kanpur";
+checkWeather(lastCity);
+
 async function getForecast(lat, lon){
 
     try{
@@ -246,5 +278,6 @@ async function getForecast(lat, lon){
         console.log(error);
 
     }
+    
 
 }
