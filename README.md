@@ -7,9 +7,7 @@ A modern and responsive Weather App built using **HTML, CSS, and JavaScript** th
 
 ## 🌐 Live Demo
 
-🔗https://github.com/Shashi-code07/weather-app/blob/main/demolive.mp4
-
----
+🔗https://github.com/Shashi-code07/weather-app/blob/main/livedemo.mp4
 
 ## 📸 Screenshot
 
