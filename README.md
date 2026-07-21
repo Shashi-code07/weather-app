@@ -16,7 +16,7 @@ A modern and responsive Weather App built using **HTML, CSS, and JavaScript** th
 > Add your project screenshots here.
 
 ```md
-![Home](screenshot1.png)
+![Home](weatherapp (2).png)
 
 ![5-Day Forecast](https://github.com/Shashi-code07/weather-app/blob/main/weatherapp%20(2).png)
 
