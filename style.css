@@ -227,3 +227,81 @@ body::after{
 .mist{
     background:linear-gradient(135deg,#606c88,#3f4c6b);
 }
+/* Date & Time */
+.date-time{
+    margin-top:8px;
+    font-size:15px;
+    opacity:0.9;
+}
+
+/* Loader */
+.loader{
+    display:none;
+    width:45px;
+    height:45px;
+    margin:20px auto;
+    border:4px solid rgba(255,255,255,.3);
+    border-top:4px solid white;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+/* Error Message */
+.error{
+    margin-top:15px;
+    color:#ffdddd;
+    font-weight:600;
+    font-size:15px;
+}
+
+/* Theme Button */
+.theme-btn{
+    position:absolute;
+    top:20px;
+    right:20px;
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+    background:white;
+    color:#333;
+    font-size:18px;
+    transition:.3s;
+}
+
+.theme-btn:hover{
+    transform:scale(1.1);
+}
+
+/* Footer */
+footer{
+    margin-top:25px;
+    font-size:14px;
+    opacity:.8;
+}
+
+/* Responsive */
+@media(max-width:500px){
+
+    .weather-card{
+        width:95%;
+        padding:20px;
+    }
+
+    .details{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .forecast-cards{
+        gap:15px;
+    }
+}
+    
