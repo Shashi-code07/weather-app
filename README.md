@@ -13,14 +13,13 @@ A modern and responsive Weather App built using **HTML, CSS, and JavaScript** th
 
 ## 📸 Screenshot
 
-> Add your project screenshots here.
+### Home Screen
 
-```md
 ![Home](home.png)
 
-![5-Day Forecast](forecast.png)
+### 5-Day Forecast
 
-```
+![5-Day Forecast](forecast.png)
 
 ---
 
@@ -57,9 +56,9 @@ Weather-App/
 │── style.css
 │── script.js
 │── README.md
-│── screenshot1.png
-│── screenshot2.png
-│── screenshot3.png
+│── home.png
+│── forecast.png
+
 ```
 
 ---
