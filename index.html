@@ -23,12 +23,21 @@
 
         <div class="weather-card">
 
-            <h1>Weather App</h1>
+            <!-- Theme Button -->
+            <button id="themeBtn" class="theme-btn">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <h1>🌦 Weather App</h1>
 
             <!-- Search -->
             <div class="search-box">
 
-                <input type="text" id="city" placeholder="Enter City Name">
+                <input
+                    type="text"
+                    id="city"
+                    placeholder="Enter City Name"
+                    autocomplete="off">
 
                 <button id="searchBtn">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -40,14 +49,27 @@
 
             </div>
 
+            <!-- Loader -->
+            <div id="loader" class="loader"></div>
+
+            <!-- Error -->
+            <p id="error" class="error"></p>
+
             <!-- Weather -->
             <div class="weather-info">
 
-                <img id="weatherIcon" class="weather-icon" alt="Weather Icon">
+                <img
+                    id="weatherIcon"
+                    class="weather-icon"
+                    src=""
+                    alt="Weather Icon">
 
                 <h2 id="temperature">25°C</h2>
 
                 <h3 id="cityName">New Delhi</h3>
+
+                <!-- Date & Time -->
+                <p id="dateTime" class="date-time"></p>
 
                 <p id="weatherStatus">Clear Sky</p>
 
@@ -107,6 +129,11 @@
                 </div>
 
             </div>
+
+            <!-- Footer -->
+            <footer>
+                Made with ❤️ by Shashi
+            </footer>
 
         </div>
 
