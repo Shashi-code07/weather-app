@@ -16,9 +16,9 @@ A modern and responsive Weather App built using **HTML, CSS, and JavaScript** th
 > Add your project screenshots here.
 
 ```md
-![Home](weatherapp (2).png)
+![Home](home.png)
 
-![5-Day Forecast](weatherapp.png)
+![5-Day Forecast](forecast.png)
 
 ```
 
